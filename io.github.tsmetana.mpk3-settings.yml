@@ -19,16 +19,11 @@ cleanup:
 modules:
   - name: mpk3-settings
     buildsystem: autotools
-    post-install:
-      - install -D -t /app/share/metainfo ${FLATPAK_ID}.metainfo.xml
-      - install -D -t /app/share/icons/hicolor/scalable/apps pkg/${FLATPAK_ID}.svg
-      - install -D -t /app/share/applications pkg/${FLATPAK_ID}.desktop
     sources:
     - type: git
       url: https://github.com/tsmetana/mpk3-settings
-      commit: c52bc9fab0b3d1cca9dd823e0cfeb333903ef63d
-    - type: file
-      path: io.github.tsmetana.mpk3-settings.metainfo.xml
+      tag: v0.1.1
+      commit: 73497e2b0f912c045ca3bfdb55f383fbd4c1bb59
     - type: shell
       commands:
       - "autoreconf -i"
