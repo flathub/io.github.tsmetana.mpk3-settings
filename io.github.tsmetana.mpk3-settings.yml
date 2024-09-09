@@ -1,6 +1,6 @@
 app-id: io.github.tsmetana.mpk3-settings
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 finish-args:
 # show windows with Wayland
@@ -22,8 +22,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/tsmetana/mpk3-settings
-      tag: v0.1.1
-      commit: 73497e2b0f912c045ca3bfdb55f383fbd4c1bb59
+#      tag: v0.1.1
+      commit: 00f407e91f156dac34f87d8e86d6716a6e2d1de6
     - type: shell
       commands:
       - "autoreconf -i"
