@@ -1,6 +1,6 @@
 app-id: io.github.tsmetana.mpk3-settings
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 finish-args:
 # show windows with Wayland
@@ -9,8 +9,10 @@ finish-args:
   - --socket=fallback-x11
 # share IPC namespace with the host (necessary for X11)
   - --share=ipc
-# Midi
-  - --device=all
+# access direct rendering (OpenGL/Vulkan)
+  - --device=dri
+# MIDI
+  - --socket=pulseaudio
 command: mpk3-settings
 cleanup:
   - /include
